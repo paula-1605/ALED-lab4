@@ -139,6 +139,10 @@ public class Patient extends Thread {
 	 * Area.
 	 */
 	private void attendedAtLocation() {
+		try {
+			sleep(this.location.getTime());
+		}catch (InterruptedException e) {
+		}
 		// TODO
 	}
 
