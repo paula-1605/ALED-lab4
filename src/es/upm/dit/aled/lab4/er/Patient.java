@@ -130,6 +130,9 @@ public class Patient extends Thread {
 	 * movement is animated by the GUI and the index is increased by one.
 	 */
 	private void advanceProtocol() {
+		EmergencyRoomGUI.getInstance().animateTransfer(this,this.protocol.get(indexProtocol));
+		this.location=this.protocol.get(indexProtocol).getTo();
+		this.indexProtocol++;
 		// TODO
 	}
 
