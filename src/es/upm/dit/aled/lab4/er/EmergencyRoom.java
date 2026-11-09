@@ -123,6 +123,7 @@ public class EmergencyRoom {
 	 * @param patient The Patient.
 	 */
 	public void admit(Patient patient) {
+		patient.start();
 		// TODO
 	}
 
@@ -132,6 +133,9 @@ public class EmergencyRoom {
 	 * @param patient The Patient.
 	 */
 	public void waitForDischarge(Patient patient) {
+		try {
+			patient.join();
+		} catch (InterruptedException e) {}
 		// TODO
 	}
 
