@@ -156,6 +156,10 @@ public class Patient extends Thread {
 	 */
 	@Override
 	public void run() {
+		while(this.indexProtocol<this.protocol.size()) {
+			this.attendedAtLocation();
+			this.advanceProtocol();
+		}
 		// TODO
 	}
 
